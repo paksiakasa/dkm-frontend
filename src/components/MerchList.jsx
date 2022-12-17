@@ -9,8 +9,8 @@ const MerchList = () => {
         getMerchs();
     }, [])
 
-    const getMerchs = async () => {
-        const response = await axios.get('http://localhost:5000/merchs');
+    const getMerchs = async() => {
+        const response = await axios.get("http://localhost:5000/merchs");
         setMerchs(response.data);
     }
 
@@ -43,7 +43,7 @@ const MerchList = () => {
                             <td>
                                 <div>
                                     <figure className='image is-4by3'>
-                                        
+                                        <img src={merch.url} alt="Merch Image" />
                                     </figure>
                                 </div>
                             </td>

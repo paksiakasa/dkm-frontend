@@ -10,7 +10,7 @@ const UserList = () => {
     }, [])
 
     const getUsers = async () => {
-        const response = await axios.get('http://localhost:5000/users');
+        const response = await axios.get("http://localhost:5000/users");
         setUsers(response.data);
     }
 
@@ -22,7 +22,7 @@ const UserList = () => {
         <div>
             <h1 className='title'>Users</h1>
             <h2 className='subtitle'>List of Users</h2>
-            <Link className='button is-primary mb-3' to='/users/add'>Add New User</Link>
+            <Link className='button is-primary mb-3' to="/users/add">Add New User</Link>
             <table className='table is-striped is-fullwidth'>
                 <thead>
                     <tr>

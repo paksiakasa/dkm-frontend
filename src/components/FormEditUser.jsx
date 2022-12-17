@@ -15,12 +15,12 @@ const FormEditUser = () => {
     useEffect(() => {
         const getUserById = async () => {
           try {
-            const response = await axios.patch(
+            const response = await axios.get(
               `http://localhost:5000/users/${id}`
             );
             setName(response.data.name);
             setEmail(response.data.email);
-            setRole(response.data.role)
+            setRole(response.data.role);
           } catch (error) {
             if (error.response) {
               setMsg(error.response.data.msg);
@@ -34,12 +34,12 @@ const FormEditUser = () => {
     const updateUser = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`http://localhost:5000/users/${id}`, {
+            await axios.patch(`http://localhost:5000/users/${id}`, {
                 name: name,
                 email: email,
                 password: password,
                 confPassword: confPassword,
-                role: role,
+                role: role
             });
             navigate("/users");
         } catch (error) {
@@ -96,7 +96,7 @@ const FormEditUser = () => {
                             </div>
                             <div className="field">
                                 <div className="control">
-                                    <button className="button is-success">Update</button>
+                                    <button type = "submit" className="button is-success">Update</button>
                                 </div>
                             </div>
                         </form>

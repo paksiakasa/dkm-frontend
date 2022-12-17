@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
-import Layout from './Layout'
-import MerchList from '../components/MerchList'
+import Layout from './Layout.jsx'
+import MerchList from '../components/MerchList.jsx'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import {getMe} from "../features/authSlice.js"

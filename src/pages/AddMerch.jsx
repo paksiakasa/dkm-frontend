@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import Layout from './Layout'
+import Layout from './Layout.jsx'
 import FormAddMerch from '../components/FormAddMerch.jsx'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'

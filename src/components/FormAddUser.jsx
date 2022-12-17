@@ -9,7 +9,6 @@ const FormAddUser = () => {
     const [confPassword, setConfPassword] = useState("");
     const [role, setRole] = useState("");
     const [msg, setMsg] = useState("");
-
     const navigate = useNavigate();
 
     const saveUser = async (e) => {
@@ -20,7 +19,7 @@ const FormAddUser = () => {
                 email: email,
                 password: password,
                 confPassword: confPassword,
-                role: role,
+                role: role
             });
             navigate("/users");
         } catch (error) {
@@ -78,7 +77,7 @@ const FormAddUser = () => {
                             </div>
                             <div className="field">
                                 <div className="control">
-                                    <button className="button is-success">Save</button>
+                                    <button type="submit" className="button is-success">Save</button>
                                 </div>
                             </div>
                         </form>
